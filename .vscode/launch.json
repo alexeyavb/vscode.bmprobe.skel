@@ -1,0 +1,76 @@
+{
+    "version": "0.2.0.1",
+    "configurations": [
+        {
+            "name": "ST-Link Cortex Debug",
+            "cwd": "${workspaceRoot}",
+            "executable": "_build/stm32f411blackpill/${workspaceFolderBasename}.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "stlink",
+            "runToEntryPoint": "main",
+            "preLaunchTask": "build DEBUG, L3, LSWO",
+            "device": "STM32F411CE",
+            "svdFile": "/opt/ST/STM32CubeCLT/STMicroelectronics_CMSIS_SVD/STM32F411.svd",
+            "configFiles": [],
+            "showDevDebugOutput": "raw" ,
+            "liveWatch": {
+                "enabled": true,
+                "samplesPerSecond": 6
+            },
+        },
+        {
+            "name": "BL-Magic Probe Cortex Debug",
+            "cwd": "${workspaceRoot}",
+            "executable": "_build/stm32f411blackpill/${workspaceFolderBasename}.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "bmp",
+            "BMPGDBSerialPort": "/dev/cu.usbmodem72A6658E1",
+            "powerOverBMP": "true",
+            "runToEntryPoint": "main",
+            "preLaunchTask": "build DEBUG, L3, LSWO",
+            "device": "STM32F411CE",
+            "svdPath":"/opt/ST/STM32CubeCLT/STMicroelectronics_CMSIS_SVD/STM32F411.svd",
+            "svdFile": "STM32F411.svd",
+            "configFiles": [],
+            "showDevDebugOutput": "raw" ,
+        "liveWatch": {
+                "enabled": true,
+                "samplesPerSecond": 3
+            },
+        "swoConfig": {
+                "enabled": false,
+                "decoders": [],
+                "cpuFrequency": 0,
+                "swoFrequency": 0,
+                "source": "probe"
+            },
+        "rttConfig": {
+                "enabled": true,
+                "address":"auto",
+                "clearSearch": true,
+                "decoders": []
+            }, 
+        "graphConfig":[{
+            "type": "realtime",
+            "label": "Graph 0",
+            "port": 1,
+            "encoding": "utf8",
+            "minimum":0,
+            "maximum":100000,
+            "plots":[
+                {
+                    // "label": "TESTT_PLOT",
+                    "graphId": "1",
+                    "color": "#53753c",
+                    "type": "x-y-plot",
+                    "port": 1,
+                    "encoding": "utf8",
+                },
+            ]
+            },
+        ]
+        },
+    ]
+}

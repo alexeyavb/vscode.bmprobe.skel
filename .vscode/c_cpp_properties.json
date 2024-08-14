@@ -1,0 +1,65 @@
+{
+    "configurations": [
+        {
+            "name": "STM32",
+            "compilerPath": "/opt/ST/STM32CubeCLT/GNU-tools-for-STM32/bin/arm-none-eabi-gcc",
+            "includePath": [
+                "${workspaceFolder}/",
+                "${workspaceFolder}/Core/Inc",
+                "${workspaceFolder}/Project/Inc/",
+                "${workspaceFolder}/tinyusb/",
+                "${workspaceFolder}/tinyusb/src",
+                "${workspaceFolder}/tinyusb/src/class/",
+                "${workspaceFolder}/tinyusb/src/class/audio/",
+                "${workspaceFolder}/tinyusb/src/class/cdc/",
+                "${workspaceFolder}/tinyusb/src/common/",
+                "${workspaceFolder}/tinyusb/src/device/",
+                "${workspaceFolder}/tinyusb/src/osal/",
+                "${workspaceFolder}/tinyusb/src/portable/st/stm32_fsdev/",
+                "${workspaceFolder}/tinyusb/src/typec",
+                "${workspaceFolder}/tinyusb/hw/",
+                "${workspaceFolder}/tinyusb/hw/bsp/",
+                "${workspaceFolder}/tinyusb/hw/bsp/stm32f4/",
+                "${workspaceFolder}/tinyusb/hw/mcu/st/stm32f4xx_hal_driver/Inc/",
+                "${workspaceFolder}/tinyusb/hw/mcu/st/cmsis_device_f4/Include",
+                "${workspaceFolder}/tinyusb/lib/CMSIS_5/CMSIS/Core/Include",
+                "${workspaceFolder}/tinyusb/hw/mcu/st/stm32f4xx_hal_driver/Inc/"
+            ],
+            "defines": [
+                "USE_HAL_I2S_REGISTER_CALLBACKS=0U",
+                "STM32F411xE",
+                "USE_HAL_DRIVER",
+                "USE_MATH_FF",
+                "USE_USB_FS",
+                "USE_FULL_ASSERT",
+                "DEBUG=1",
+                "LOG=2",
+                "LOGGER=swo",
+                "BOARD=stm32f411blackpill"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm",
+            "mergeConfigurations": false,
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/Core/",
+                    "${workspaceFolder}/Core/Src/",
+                    "${workspaceFolder}/Project/",
+                    "${workspaceFolder}/Project/Src",
+                    "${workspaceFolder}/tinyusb/hw/bsp/stm32f4/",
+                    "${workspaceFolder}/tinyusb/hw/bsp/stm32f4/FreeRTOSConfig/",
+                    "${workspaceFolder}/tinyusb/hw/bsp/stm32f4/boards/stm32f411blackpill/",
+                    "${workspaceFolder}/tinyusb/hw/mcu/st/cmsis_device_f4/",
+                    "${workspaceFolder}/tinyusb/hw/mcu/st/cmsis_device_f4/Source/",
+                    "${workspaceFolder}/tinyusb/hw/mcu/st/cmsis_device_f4/Source/Templates/",
+                    "${workspaceFolder}/tinyusb/hw/mcu/st/cmsis_device_f4/Source/Templates/gcc/",
+                    "${workspaceFolder}/tinyusb/hw/mcu/st/stm32f4xx_hal_driver/",
+                    "${workspaceFolder}/tinyusb/hw/mcu/st/stm32f4xx_hal_driver/Src/"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}
